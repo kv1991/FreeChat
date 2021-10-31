@@ -3,7 +3,7 @@ import 'package:free_chat/constants.dart';
 
 const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
 
-ThemeData lightThemeData() {
+ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
     primaryColor: kPrimaryColor,
     appBarTheme: appBarTheme,
@@ -15,7 +15,7 @@ ThemeData lightThemeData() {
   );
 }
 
-ThemeData darkThemeData() {
+ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
     primaryColor: kPrimaryColor,
     appBarTheme: appBarTheme,

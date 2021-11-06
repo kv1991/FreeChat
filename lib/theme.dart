@@ -6,8 +6,9 @@ const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
     primaryColor: kPrimaryColor,
-    // scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
+    iconTheme: const IconThemeData(color: kContentColorLightTheme),
     colorScheme: const ColorScheme.light().copyWith(
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
@@ -19,8 +20,9 @@ ThemeData lightThemeData(BuildContext context) {
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
     primaryColor: kPrimaryColor,
-    // scaffoldBackgroundColor: Colors.white,
-    appBarTheme: appBarTheme,  
+    scaffoldBackgroundColor: kContentColorLightTheme,
+    appBarTheme: appBarTheme,
+    iconTheme: const IconThemeData(color: kContentColorLightTheme),
     colorScheme: const ColorScheme.dark().copyWith(
       primary: kPrimaryColor,
       secondary: kSecondaryColor,

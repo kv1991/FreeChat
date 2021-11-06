@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_chat/components/primary_button.dart';
 import 'package:free_chat/constants.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
@@ -18,38 +19,15 @@ class SigninOrSignupScreen extends StatelessWidget {
                 height: 146,
               ),
               const Spacer(),
-              MaterialButton(
-                onPressed: () {},
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 0.75),
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(40)),
-                    color: kPrimaryColor,
-                  ),
-                  child: const Text(
-                    'Sign In',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white)
-                    ),
-                )
+              PrimaryButton(
+                text: 'Sign In',
+                press: () {}
               ),
               const SizedBox(height: kDefaultPadding * 1.5),
-              MaterialButton(
-                onPressed: () {},
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 0.75),
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(40)),
-                    color: Theme.of(context).colorScheme.secondary
-                  ),
-                  child: const Text(
-                    'Sign Up',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white)
-                    ),
-                )
+              PrimaryButton(
+                text: 'Sign Up',
+                press: () {},
+                color: Theme.of(context).colorScheme.secondary
               ),
               const Spacer(flex: 2),
             ]

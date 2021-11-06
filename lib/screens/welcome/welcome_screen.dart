@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_chat/screens/signinOrSignup/signin_or_signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({ Key? key }) : super(key: key);
@@ -27,9 +28,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             const Spacer(flex: 3),
             TextButton(
-              onPressed: () {
-                print('wewe');
-              },
+              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SigninOrSignupScreen())),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

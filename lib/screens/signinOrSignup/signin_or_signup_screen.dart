@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:free_chat/components/primary_button.dart';
 import 'package:free_chat/constants.dart';
+import 'package:free_chat/screens/charts/charts_screen.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
   const SigninOrSignupScreen({ Key? key }) : super(key: key);
@@ -21,7 +22,7 @@ class SigninOrSignupScreen extends StatelessWidget {
               const Spacer(),
               PrimaryButton(
                 text: 'Sign In',
-                press: () {}
+                press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const ChartsScreen()))
               ),
               const SizedBox(height: kDefaultPadding * 1.5),
               PrimaryButton(

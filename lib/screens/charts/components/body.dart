@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_chat/components/filled_outline_button.dart';
 import 'package:free_chat/constants.dart';
 
 class Body extends StatelessWidget {
@@ -7,15 +8,18 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.fromLTRB(kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
       child: Row(
         children: [
-          MaterialButton(
-            onPressed: () {},
-            child: Text('Recent Message'),
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30)
-            ),
+          FilledOutlineButton(
+            text: 'Recent Message',
+            press: () {}
+          ),
+          const SizedBox(width: kDefaultPadding),
+          FilledOutlineButton(
+            text: 'Active',
+            press: () {},
+            isFilled: false
           )
         ],
       ),

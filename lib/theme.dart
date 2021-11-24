@@ -13,6 +13,11 @@ ThemeData lightThemeData(BuildContext context) {
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
+      selectedItemColor: kContentColorLightTheme,
+      unselectedItemColor: kContentColorLightTheme.withOpacity(0.35)
     )
   );
 }
@@ -27,6 +32,12 @@ ThemeData darkThemeData(BuildContext context) {
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: kContentColorLightTheme,
+      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
+      selectedItemColor: kContentColorLightTheme,
+      unselectedItemColor: kContentColorLightTheme.withOpacity(0.32)
     )
   );
 }

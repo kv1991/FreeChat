@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:free_chat/constants.dart';
 import 'package:free_chat/screens/charts/components/body.dart';
 
-class ChartsScreen extends StatelessWidget {
+class ChartsScreen extends StatefulWidget {
   const ChartsScreen({ Key? key }) : super(key: key);
+
+  @override
+  State<ChartsScreen> createState() => _ChartsScreenState();
+}
+
+class _ChartsScreenState extends State<ChartsScreen> {
+  int selectedIdx = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +25,28 @@ class ChartsScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Body()
+      body: const Body(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: kPrimaryColor,
+        child: const Icon(
+          Icons.person_add,
+          color: Colors.white,
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIdx,
+        onTap: (val) {
+          setState(() {
+            selectedIdx = val;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.messenger), label: 'Chats'),
+          BottomNavigationBarItem(icon: Icon(Icons.people), label: 'People'),
+          BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Calls'),
+        ],
+      ),
     );
   }
 }

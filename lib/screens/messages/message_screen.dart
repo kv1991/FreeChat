@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:free_chat/constants.dart';
+import 'package:free_chat/screens/messages/components/body.dart';
 
 class MessageScreen extends StatelessWidget {
   const MessageScreen({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar()
+      appBar: buildAppBar(),
+      body: Body()
     );
   }
 

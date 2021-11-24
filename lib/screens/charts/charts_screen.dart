@@ -35,6 +35,7 @@ class _ChartsScreenState extends State<ChartsScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: selectedIdx,
         onTap: (val) {
           setState(() {
@@ -45,6 +46,13 @@ class _ChartsScreenState extends State<ChartsScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.messenger), label: 'Chats'),
           BottomNavigationBarItem(icon: Icon(Icons.people), label: 'People'),
           BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Calls'),
+          BottomNavigationBarItem(
+            icon: CircleAvatar(
+              radius: 14,
+              backgroundImage: AssetImage("assets/images/user.png")
+            ),
+            label: 'Profile'
+          )
         ],
       ),
     );

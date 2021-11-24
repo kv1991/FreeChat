@@ -3,7 +3,7 @@ import 'package:free_chat/components/chat_card.dart';
 import 'package:free_chat/components/filled_outline_button.dart';
 import 'package:free_chat/constants.dart';
 import 'package:free_chat/models/chat_data.dart';
-import 'package:free_chat/screens/messages/messages_screen.dart';
+import 'package:free_chat/screens/messages/message_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({ Key? key }) : super(key: key);
@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
             itemBuilder: (context, index) => ChatCard(
               chat: chatsData[index],
               press: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const MessagesScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const MessageScreen()));
               }
             )
           ),
